@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oracle Trading Engine — Autonomous AI Trading Platform</title>
+  <meta name="description" content="Oracle Trading Engine — An autonomous AI-powered trading platform with multi-strategy analysis, real-time risk management, and broker integration. Built on Base44.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <div class="logo-icon">Ω</div>
+      <span>Oracle</span>
+    </div>
+    <div class="nav-links">
+      <a href="#architecture">Architecture</a>
+      <a href="#strategies">Strategies</a>
+      <a href="#entities">Data Model</a>
+      <a href="#risk">Risk Engine</a>
+      <a href="#contact" class="nav-cta">Contact →</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="status-dot"></span>
+        Paper Trading Mode — Active
+      </div>
+      <h1>The <span class="highlight">Autonomous AI</span><br>Trading Engine</h1>
+      <p class="hero-subtitle">
+        A multi-strategy AI trading platform that analyzes market regimes, manages risk in real-time,
+        and executes trades through broker APIs. From paper trading to live autonomous execution —
+        built with a 16-entity data model, 10 trading strategies, and 3 backend engines.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">AI Market Analysis</span>
+        <span class="tag">Real-time Risk Management</span>
+        <span class="tag">Broker Integration</span>
+        <span class="tag">Multi-Asset</span>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-num">16</span><span class="hstat-label">Entities</span></div>
+        <div class="hstat"><span class="hstat-num">10</span><span class="hstat-label">Strategies</span></div>
+        <div class="hstat"><span class="hstat-num">3</span><span class="hstat-label">Engines</span></div>
+        <div class="hstat"><span class="hstat-num">5</span><span class="hstat-label">Asset Classes</span></div>
+      </div>
+    </div>
+
+    <!-- Terminal Mockup -->
+    <div class="terminal-frame">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title">oracle-engine — paper mode</span>
+      </div>
+      <div class="terminal-body">
+        <div class="term-line"><span class="prompt">$</span> oracle.analyze BTC/USD</div>
+        <div class="term-out">→ Fetching market data... <span class="ok">✓</span></div>
+        <div class="term-out">→ Detecting market regime...</div>
+        <div class="term-result">  Regime: <span class="hl-green">STRONG_BULLISH</span></div>
+        <div class="term-result">  Confidence: <span class="hl-yellow">78%</span></div>
+        <div class="term-result">  Strategy: <span class="hl-cyan">trend_following_v2</span></div>
+        <div class="term-result">  Entry: $67,420 | SL: $66,100 | TP: $69,800</div>
+        <div class="term-out">→ Risk check...</div>
+        <div class="term-result">  R/R Ratio: <span class="hl-green">2.8:1</span></div>
+        <div class="term-result">  Position: 0.15 BTC (2% risk)</div>
+        <div class="term-result">  Risk: <span class="ok">PASSED ✓</span></div>
+        <div class="term-out">→ Submitting order...</div>
+        <div class="term-result">  Status: <span class="hl-green">FILLED</span></div>
+        <div class="term-line"><span class="prompt">$</span> <span class="cursor">_</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section id="architecture" class="architecture">
+    <h2>System Architecture</h2>
+    <p class="section-subtitle">Three independent engines working in concert.</p>
+    <div class="arch-grid">
+      <div class="arch-card">
+        <div class="arch-icon">🧠</div>
+        <h3>Oracle Engine</h3>
+        <p>The AI brain. Analyzes multi-timeframe market data, detects market regimes, selects optimal strategies, and generates trade decisions with confidence scoring and full reasoning chains.</p>
+        <div class="arch-tags">
+          <span>Market Regime Detection</span>
+          <span>Multi-Timeframe Analysis</span>
+          <span>AI Confidence Scoring</span>
+        </div>
+      </div>
+      <div class="arch-card">
+        <div class="arch-icon">🛡️</div>
+        <h3>Risk Engine</h3>
+        <p>The guardian. Evaluates every trade decision against 15+ risk parameters before execution. Manages position sizing, exposure limits, drawdown protection, and emergency policies.</p>
+        <div class="arch-tags">
+          <span>15+ Risk Parameters</span>
+          <span>Position Sizing</span>
+          <span>Drawdown Protection</span>
+        </div>
+      </div>
+      <div class="arch-card">
+        <div class="arch-icon">🔌</div>
+        <h3>Broker Adapter</h3>
+        <p>The executor. Abstracts broker-specific APIs into a unified interface. Supports Forex, Crypto, Stocks, and multi-asset brokers with OAuth and API key authentication.</p>
+        <div class="arch-tags">
+          <span>Multi-Broker Support</span>
+          <span>Order Management</span>
+          <span>Position Tracking</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flow Diagram -->
+    <div class="flow-diagram">
+      <div class="flow-step">
+        <div class="flow-icon">📡</div>
+        <span>Market Data</span>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step active">
+        <div class="flow-icon">🧠</div>
+        <span>Oracle Engine</span>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step active">
+        <div class="flow-icon">🛡️</div>
+        <span>Risk Engine</span>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step active">
+        <div class="flow-icon">🔌</div>
+        <span>Broker Adapter</span>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-icon">📊</div>
+        <span>Position</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trading Modes -->
+  <section class="modes">
+    <h2>Three Trading Modes</h2>
+    <p class="section-subtitle">Progressive autonomy — from safe simulation to live execution.</p>
+    <div class="modes-grid">
+      <div class="mode-card">
+        <div class="mode-badge green">ACTIVE</div>
+        <h3>Paper Trading</h3>
+        <p>Full simulation with real market data. No real money at risk. Every trade is logged, analyzed, and evaluated. The platform starts here by default.</p>
+        <div class="mode-detail">
+          <span>Real market data</span>
+          <span>Simulated execution</span>
+          <span>Full analytics</span>
+        </div>
+      </div>
+      <div class="mode-card">
+        <div class="mode-badge yellow">SIGNAL</div>
+        <h3>Signal Mode</h3>
+        <p>AI generates trade signals with full reasoning. Human reviews and approves before execution. Perfect for validating AI performance with real stakes.</p>
+        <div class="mode-detail">
+          <span>AI signals</span>
+          <span>Human approval</span>
+          <span>Real execution</span>
+        </div>
+      </div>
+      <div class="mode-card">
+        <div class="mode-badge red">LOCKED</div>
+        <h3>Live Autonomous</h3>
+        <p>Full autonomous trading. AI analyzes, risk engine validates, broker executes — no human in the loop. Requires explicit user enable. Emergency policies active.</p>
+        <div class="mode-detail">
+          <span>Full autonomy</span>
+          <span>No human loop</span>
+          <span>Emergency policies</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategies -->
+  <section id="strategies" class="strategies">
+    <h2>10 Trading Strategies</h2>
+    <p class="section-subtitle">Each strategy maps to specific market regimes, timeframes, and asset classes.</p>
+    <div class="strat-grid">
+      <div class="strat-card">
+        <span class="strat-cat">Trend Following</span>
+        <h4>Dynamic Trend Rider</h4>
+        <p>Multi-EMA confirmation with ADX filtering. Rides strong trends with trailing stops.</p>
+      </div>
+      <div class="strat-card">
+        <span class="strat-cat">Breakout</span>
+        <h4>Volatility Breakout</h4>
+        <p>Detects compression-expansion cycles. Enters on volume-confirmed breakouts.</p>
+      </div>
+      <div class="strat-card">
+        <span class="strat-cat">Mean Reversion</span>
+        <h4>Band Reversion Pro</h4>
+        <p>Bollinger Band + RSI divergence. Fades extreme moves in range-bound markets.</p>
+      </div>
+      <div class="strat-card">
+        <span class="strat-cat">Momentum</span>
+        <h4>RSI Momentum Surge</h4>
+        <p>RSI + MACD convergence. Captures momentum bursts with tight risk management.</p>
+      </div>
+      <div class="strat-card">
+        <span class="strat-cat">Support/Resistance</span>
+        <h4>Level Sniper</h4>
+        <p>Price-action based key level trading. Pin bars and rejection wicks at S/R zones.</p>
+      </div>
+      <div class="strat-card">
+        <span class="strat-cat">Supply/Demand</span>
+        <h4>Zone Hunter</h4>
+        <p>Identifies institutional supply/demand zones. Enters on zone retest with confirmation.</p>
+      </div>
+      <div class="strat-card">
+        <span class="strat-cat">Liquidity</span>
+        <h4>Liquidity Sweep</h4>
+        <p>Detects stop hunts and liquidity grabs. Fades the sweep and trades the reversal.</p>
+      </div>
+      <div class="strat-card">
+        <span class="strat-cat">Volatility</span>
+        <h4>ATR Squeeze Play</h4>
+        <p>ATR-based volatility timing. Enters post-compression expansion moves.</p>
+      </div>
+      <div class="strat-card">
+        <span class="strat-cat">News Reaction</span>
+        <h4>News Spike Catcher</h4>
+        <p>High-impact news event detection. Enters post-spike continuation with tight stops.</p>
+      </div>
+      <div class="strat-card">
+        <span class="strat-cat">Multi-Timeframe</span>
+        <h4>Confluence Matrix</h4>
+        <p>Aligns 4H trend with 15m entry. Highest confidence trades with full confluence scoring.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Model -->
+  <section id="entities" class="entities">
+    <h2>16-Entity Data Model</h2>
+    <p class="section-subtitle">A complete trading system data architecture — from accounts to audit logs.</p>
+    <div class="entity-grid">
+      <div class="entity-col">
+        <h4>Core Trading</h4>
+        <div class="entity-list">
+          <span>TradingAccount</span>
+          <span>Order</span>
+          <span>Position</span>
+          <span>Trade</span>
+        </div>
+      </div>
+      <div class="entity-col">
+        <h4>Market Intelligence</h4>
+        <div class="entity-list">
+          <span>Asset</span>
+          <span>MarketData</span>
+          <span>NewsEvent</span>
+          <span>AIAnalysis</span>
+        </div>
+      </div>
+      <div class="entity-col">
+        <h4>Strategy Layer</h4>
+        <div class="entity-list">
+          <span>Strategy</span>
+          <span>StrategyVersion</span>
+          <span>TradeDecision</span>
+          <span>Backtest</span>
+          <span>ForwardTest</span>
+        </div>
+      </div>
+      <div class="entity-col">
+        <h4>Risk & Control</h4>
+        <div class="entity-list">
+          <span>RiskProfile</span>
+          <span>PerformanceMetric</span>
+          <span>Alert</span>
+          <span>AuditLog</span>
+          <span>SystemEvent</span>
+          <span>BrokerConnection</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Risk Engine -->
+  <section id="risk" class="risk-section">
+    <h2>Risk Engine — 15+ Parameters</h2>
+    <p class="section-subtitle">Every trade passes through a multi-layered risk gate before execution.</p>
+    <div class="risk-grid">
+      <div class="risk-item">
+        <span class="risk-val">2%</span>
+        <span class="risk-label">Max Risk Per Trade</span>
+      </div>
+      <div class="risk-item">
+        <span class="risk-val">5%</span>
+        <span class="risk-label">Max Daily Loss</span>
+      </div>
+      <div class="risk-item">
+        <span class="risk-val">10%</span>
+        <span class="risk-label">Max Weekly Loss</span>
+      </div>
+      <div class="risk-item">
+        <span class="risk-val">20%</span>
+        <span class="risk-label">Max Drawdown</span>
+      </div>
+      <div class="risk-item">
+        <span class="risk-val">5</span>
+        <span class="risk-label">Max Open Positions</span>
+      </div>
+      <div class="risk-item">
+        <span class="risk-val">15%</span>
+        <span class="risk-label">Max Exposure Per Asset</span>
+      </div>
+      <div class="risk-item">
+        <span class="risk-val">25%</span>
+        <span class="risk-label">Max Correlated Exposure</span>
+      </div>
+      <div class="risk-item">
+        <span class="risk-val">5</span>
+        <span class="risk-label">Max Consecutive Losses</span>
+      </div>
+      <div class="risk-item">
+        <span class="risk-val">60%</span>
+        <span class="risk-label">Min AI Confidence</span>
+      </div>
+      <div class="risk-item">
+        <span class="risk-val">15%</span>
+        <span class="risk-label">Capital Preservation Threshold</span>
+      </div>
+    </div>
+    <div class="risk-note">
+      <strong>Emergency Policy:</strong> If drawdown hits 20%, the system auto-activates capital preservation mode — closes all positions and pauses trading until manual review.
+    </div>
+  </section>
+
+  <!-- Assets -->
+  <section class="assets">
+    <h2>Supported Assets</h2>
+    <p class="section-subtitle">10 seeded assets across 5 classes — expandable to any broker-supported instrument.</p>
+    <div class="asset-grid">
+      <div class="asset-card crypto">
+        <span class="asset-symbol">BTC/USD</span>
+        <span class="asset-class">Crypto</span>
+      </div>
+      <div class="asset-card crypto">
+        <span class="asset-symbol">ETH/USD</span>
+        <span class="asset-class">Crypto</span>
+      </div>
+      <div class="asset-card forex">
+        <span class="asset-symbol">EUR/USD</span>
+        <span class="asset-class">Forex</span>
+      </div>
+      <div class="asset-card forex">
+        <span class="asset-symbol">GBP/USD</span>
+        <span class="asset-class">Forex</span>
+      </div>
+      <div class="asset-card forex">
+        <span class="asset-symbol">USD/JPY</span>
+        <span class="asset-class">Forex</span>
+      </div>
+      <div class="asset-card stock">
+        <span class="asset-symbol">AAPL</span>
+        <span class="asset-class">Stock</span>
+      </div>
+      <div class="asset-card stock">
+        <span class="asset-symbol">TSLA</span>
+        <span class="asset-class">Stock</span>
+      </div>
+      <div class="asset-card commodity">
+        <span class="asset-symbol">XAU/USD</span>
+        <span class="asset-class">Commodity</span>
+      </div>
+      <div class="asset-card index">
+        <span class="asset-symbol">SPX500</span>
+        <span class="asset-class">Index</span>
+      </div>
+      <div class="asset-card crypto">
+        <span class="asset-symbol">SOL</span>
+        <span class="asset-class">Crypto</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech -->
+  <section class="tech">
+    <h2>Technology Stack</h2>
+    <div class="tech-grid">
+      <div class="tech-item">
+        <strong>Platform</strong>
+        <span>Base44 — React + Tailwind + Vite</span>
+      </div>
+      <div class="tech-item">
+        <strong>Backend</strong>
+        <span>3 deployed functions: oracleEngine, riskEngine, brokerAdapter</span>
+      </div>
+      <div class="tech-item">
+        <strong>Database</strong>
+        <span>16 entities with row-level security and audit logging</span>
+      </div>
+      <div class="tech-item">
+        <strong>AI</strong>
+        <span>Multi-timeframe analysis, regime detection, confidence scoring</span>
+      </div>
+      <div class="tech-item">
+        <strong>Brokers</strong>
+        <span>OANDA, Binance, Interactive Brokers (adapter pattern)</span>
+      </div>
+      <div class="tech-item">
+        <strong>Security</strong>
+        <span>API key abstraction, immutable audit logs, emergency policies</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="cta">
+    <h2>Built for autonomous, intelligent, risk-managed trading.</h2>
+    <p>Currently in paper trading mode. No live trading without explicit user enable.</p>
+    <div class="cta-links">
+      <span>📞 076988619</span>
+      <span>✉️ oswokceo@gmail.com</span>
+      <a href="https://github.com/crptoangel232/oracle-trading-engine" target="_blank" rel="noopener">GitHub Repo →</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <div class="logo-icon">Ω</div>
+      <span>Oracle Trading Engine</span>
+    </div>
+    <p>Autonomous AI trading platform · Built by Hawanatu Kargbo</p>
+    <p class="footer-copy">© 2026 Oracle Trading Engine. Paper trading mode active.</p>
+  </footer>
+</body>
+</html>
