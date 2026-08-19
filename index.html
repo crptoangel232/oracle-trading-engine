@@ -6,81 +6,64 @@
 <title>Oracle Trading Engine</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:#1a1814;color:#e2ddd4;line-height:1.65;}
-.wrap{max-width:680px;margin:0 auto;padding:60px 24px;}
-header{margin-bottom:48px;padding-bottom:24px;border-bottom:1px solid #2e2a22;}
-header .label{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#b8854a;font-weight:600;margin-bottom:12px;}
-header h1{font-family:Georgia,"Times New Roman",serif;font-size:34px;font-weight:400;letter-spacing:-0.5px;margin-bottom:12px;}
-header p{font-size:16px;color:#8c8678;max-width:520px;}
-nav{display:flex;gap:24px;margin-top:20px;font-size:14px;}
-nav a{color:#b8854a;text-decoration:none;border-bottom:1px solid transparent;}
-nav a:hover{border-bottom-color:#b8854a;}
-.section{margin-bottom:48px;}
-.section h2{font-family:Georgia,serif;font-size:20px;font-weight:400;margin-bottom:16px;}
-.feat{display:flex;gap:16px;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #28251e;}
-.feat:last-child{border-bottom:none;}
-.feat .fn{font-family:Georgia,serif;font-size:16px;color:#b8854a;min-width:24px;}
-.feat h3{font-size:15px;font-weight:600;margin-bottom:4px;}
-.feat p{font-size:14px;color:#8c8678;}
-.stack{display:flex;flex-wrap:wrap;gap:8px;}
-.stack span{font-size:13px;color:#8c8678;padding:4px 12px;border:1px solid #2e2a22;border-radius:2px;}
-footer{padding-top:24px;border-top:1px solid #2e2a22;font-size:13px;color:#5c564b;display:flex;justify-content:space-between;}
-footer a{color:#8c8678;text-decoration:none;}
-footer a:hover{text-decoration:underline;}
-@media(max-width:600px){.wrap{padding:40px 20px;}header h1{font-size:26px;}footer{flex-direction:column;gap:8px;}}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:#191712;color:#e0dccf;line-height:1.65;}
+.w{max-width:640px;margin:0 auto;padding:56px 24px;}
+.hd{margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid #2d2920;}
+.hd .tg{font-family:Georgia,"Times New Roman",serif;font-size:13px;color:#c49a3a;margin-bottom:14px;}
+.hd h1{font-family:Georgia,"Times New Roman",serif;font-size:36px;font-weight:400;letter-spacing:-0.5px;margin-bottom:12px;}
+.hd .ds{font-size:15px;color:#857d68;max-width:500px;margin-bottom:16px;}
+.nv{display:flex;gap:20px;font-size:13px;}
+.nv a{color:#c49a3a;text-decoration:none;border-bottom:1px solid transparent;padding-bottom:1px;}
+.nv a:hover{border-bottom-color:#c49a3a;}
+.fl{}.f{padding:16px 0;border-bottom:1px solid #2d2920;}
+.f{display:flex;gap:14px;}
+.fn{font-family:Georgia,"Times New Roman",serif;font-size:13px;color:#c49a3a;min-width:22px;flex-shrink:0;padding-top:2px;}
+.f h3{font-size:14px;font-weight:600;margin-bottom:3px;}
+.f p{font-size:13px;color:#857d68;}
+.stats{display:flex;gap:28px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid #2d2920;}
+.s{display:flex;flex-direction:column;}
+.sv{font-family:Georgia,"Times New Roman",serif;font-size:24px;font-weight:400;color:#c49a3a;}
+.sl{font-size:11px;color:#504a3c;letter-spacing:1px;text-transform:uppercase;margin-top:2px;}
+.se{margin-top:40px;margin-bottom:40px;}
+.se h2{font-family:Georgia,"Times New Roman",serif;font-size:17px;font-weight:400;margin-bottom:14px;}
+.sk{display:flex;flex-wrap:wrap;gap:6px;}
+.sk span{font-size:12px;color:#857d68;padding:3px 10px;border:1px solid #2d2920;}
+.ft{padding-top:20px;border-top:1px solid #2d2920;font-size:12px;color:#504a3c;display:flex;justify-content:space-between;}
+.ft a{color:#857d68;text-decoration:none;}
+.ft a:hover{text-decoration:underline;}
+@media(max-width:600px){.w{padding:40px 20px;}.hd h1{font-size:24px;}.ft{flex-direction:column;gap:6px;}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header>
-<div class="label">AI Trading</div>
+<div class="w">
+<div class="hd">
+<div class="tg">Autonomous trading that starts on paper and earns its way to live.</div>
 <h1>Oracle Trading Engine</h1>
-<p>Autonomous AI trading platform. Ten strategies, sixteen entities, real-time risk management, and a paper-to-live progression pipeline.</p>
-<nav>
+<p class="ds">AI-driven analysis across ten strategies, real-time risk management, and a paper-to-live progression pipeline. Sixteen entities. Built on Base44.</p>
+<div class="nv">
 <a href="https://github.com/crptoangel232/oracle-trading-engine" target="_blank">Source</a>
 <a href="https://crptoangel232.github.io/My-Portfolio-Website/">Portfolio</a>
-</nav>
-</header>
-<section class="section">
-<h2>What it does</h2>
+</div>
+</div>
+<div class="stats"><div class="s"><span class="sv">10</span><span class="sl">Strategies</span></div><div class="s"><span class="sv">16</span><span class="sl">Entities</span></div><div class="s"><span class="sv">10</span><span class="sl">Assets</span></div><div class="s"><span class="sv">3</span><span class="sl">Backend Functions</span></div></div>
+<div class="fl">
+<div class="f"><span class="fn">01</span><div><h3>Multi-Strategy Analysis</h3><p>Ten strategies: trend following, momentum, mean reversion, breakout, scalping.</p></div></div>
+<div class="f"><span class="fn">02</span><div><h3>Risk Management Engine</h3><p>Per-trade, daily, and weekly loss limits. Drawdown protection. Max consecutive loss cutoffs.</p></div></div>
+<div class="f"><span class="fn">03</span><div><h3>AI Decision Engine</h3><p>Multi-timeframe analysis with confidence scoring and market regime detection.</p></div></div>
+<div class="f"><span class="fn">04</span><div><h3>Broker Adapter</h3><p>Abstract interface for connecting live or paper brokers. Starts in paper mode.</p></div></div>
+<div class="f"><span class="fn">05</span><div><h3>Backtesting</h3><p>Full historical validation with win rate, profit factor, Sharpe ratio, max drawdown.</p></div></div>
+<div class="f"><span class="fn">06</span><div><h3>Forward Testing</h3><p>Real-time paper trading validation before any live capital is deployed.</p></div></div>
+<div class="f"><span class="fn">07</span><div><h3>16-Entity Data Model</h3><p>Accounts, orders, positions, trades, strategies, risk profiles, alerts, audit logs.</p></div></div>
 
-<div class="feat">
-<div class="fn">01</div>
-<div><h3>Multi-Strategy Analysis</h3><p>Ten strategies across trend, momentum, mean reversion, and breakout.</p></div>
 </div>
-<div class="feat">
-<div class="fn">02</div>
-<div><h3>Risk Management Engine</h3><p>Per-trade, daily, and weekly loss limits with drawdown protection.</p></div>
-</div>
-<div class="feat">
-<div class="fn">03</div>
-<div><h3>16-Entity Data Model</h3><p>Full trading system: accounts, orders, positions, trades, strategies, backtests.</p></div>
-</div>
-<div class="feat">
-<div class="fn">04</div>
-<div><h3>AI Decision Engine</h3><p>Multi-timeframe analysis with confidence scoring and regime detection.</p></div>
-</div>
-<div class="feat">
-<div class="fn">05</div>
-<div><h3>Broker Adapter</h3><p>Abstract interface for connecting live or paper trading brokers.</p></div>
-</div>
-<div class="feat">
-<div class="fn">06</div>
-<div><h3>Backtesting & Forward Testing</h3><p>Validate strategies before going live with full metrics.</p></div>
-</div>
-<div class="feat">
-<div class="fn">07</div>
-<div><h3>Paper Trading Mode</h3><p>Start safe. No live trades without explicit enable.</p></div>
-</div>
-</section>
-<section class="section">
+<div class="se">
 <h2>Built with</h2>
-<div class="stack"><span>TypeScript</span><span>AI</span><span>Base44</span><span>Risk Management</span></div>
-</section>
-<footer>
+<div class="sk"><span>TypeScript</span><span>AI</span><span>Base44</span><span>Risk Engine</span></div>
+</div>
+<div class="ft">
 <span>Albert Taylor — Sierra Leone</span>
 <a href="https://github.com/crptoangel232" target="_blank">github.com/crptoangel232</a>
-</footer>
+</div>
 </div>
 </body>
 </html>
