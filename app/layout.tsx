@@ -1,0 +1,1 @@
+import "./globals.css"; export const metadata={title:"Oracle Trading Engine",description:"Forex and Deriv synthetic trading platform"}; export default function Layout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}
