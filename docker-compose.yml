@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    ports: ["3000:3000"]
+    restart: unless-stopped
+  api:
+    build: ./services/api
+    ports: ["8000:8000"]
+    restart: unless-stopped
+    environment:
+      EXECUTION_MODE: paper
+      ENCRYPTION_KEY: change-me-in-vps-secrets
